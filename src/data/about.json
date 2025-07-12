@@ -1,0 +1,31 @@
+{
+    "bio": [
+        "Hey, I'm Jilmer — a developer who loves turning game ideas into playable realities. I've worked across a variety of projects, from fast-paced PvP games on Telegram to space shooters with 50,000+ downloads. My favorite part of game dev is making things *feel* good — whether it's a snappy UI, satisfying combat, or smooth multiplayer.",
+        "I mostly work with Unity, C#, and backend tools like Colyseus and AWS. I'm big on performance optimization, clean UI design, and shipping features that actually make a difference.",
+        "When I'm not coding, you'll probably find me lifting weights, reading about game balance theory, or exploring new indie titles for inspiration. I'm always learning and always building."
+    ],
+    "technologies": [
+        "Unity",
+        "C#",
+        "Colyseus",
+        "WebGL",
+        "AWS",
+        "Node.js",
+        "TypeScript",
+        "MongoDB"
+    ],
+    "highlights": [
+        {
+            "icon": "Build",
+            "text": "12+ major features shipped across games"
+        },
+        {
+            "icon": "SportsEsports",
+            "text": "100,000+ players reached across all projects"
+        },
+        {
+            "icon": "Loop",
+            "text": "Led multiplayer server handling 100+ sessions concurrently"
+        }
+    ]
+}
