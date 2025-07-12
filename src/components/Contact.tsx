@@ -4,13 +4,13 @@ import {
     Typography, 
     Container, 
     Paper, 
-    TextField, 
     Snackbar, 
     Alert,
     CircularProgress
 } from '@mui/material';
 import { Email, Send } from '@mui/icons-material';
 import { Button } from './ui/Button';
+import { TextField } from './ui/TextField';
 import emailjs from '@emailjs/browser';
 
 interface FormData {
@@ -183,30 +183,17 @@ export default function Contact() {
                     <form onSubmit={handleSubmit}>
                         <Box sx={{ mb: 3 }}>
                             <TextField
-                                fullWidth
                                 label="Name"
                                 value={formData.name}
                                 onChange={handleInputChange('name')}
                                 error={!!errors.name}
                                 helperText={errors.name}
                                 disabled={isSubmitting}
-                                sx={{
-                                    '& .MuiOutlinedInput-root': {
-                                        borderRadius: 2,
-                                        '&:hover fieldset': {
-                                            borderColor: '#6366f1',
-                                        },
-                                        '&.Mui-focused fieldset': {
-                                            borderColor: '#6366f1',
-                                        },
-                                    },
-                                }}
                             />
                         </Box>
                         
                         <Box sx={{ mb: 3 }}>
                             <TextField
-                                fullWidth
                                 label="Email"
                                 type="email"
                                 value={formData.email}
@@ -214,46 +201,22 @@ export default function Contact() {
                                 error={!!errors.email}
                                 helperText={errors.email}
                                 disabled={isSubmitting}
-                                sx={{
-                                    '& .MuiOutlinedInput-root': {
-                                        borderRadius: 2,
-                                        '&:hover fieldset': {
-                                            borderColor: '#6366f1',
-                                        },
-                                        '&.Mui-focused fieldset': {
-                                            borderColor: '#6366f1',
-                                        },
-                                    },
-                                }}
                             />
                         </Box>
                         
                         <Box sx={{ mb: 3 }}>
                             <TextField
-                                fullWidth
                                 label="Subject"
                                 value={formData.subject}
                                 onChange={handleInputChange('subject')}
                                 error={!!errors.subject}
                                 helperText={errors.subject}
                                 disabled={isSubmitting}
-                                sx={{
-                                    '& .MuiOutlinedInput-root': {
-                                        borderRadius: 2,
-                                        '&:hover fieldset': {
-                                            borderColor: '#6366f1',
-                                        },
-                                        '&.Mui-focused fieldset': {
-                                            borderColor: '#6366f1',
-                                        },
-                                    },
-                                }}
                             />
                         </Box>
                         
                         <Box sx={{ mb: 4 }}>
                             <TextField
-                                fullWidth
                                 label="Message"
                                 multiline
                                 rows={4}
@@ -262,17 +225,6 @@ export default function Contact() {
                                 error={!!errors.message}
                                 helperText={errors.message}
                                 disabled={isSubmitting}
-                                sx={{
-                                    '& .MuiOutlinedInput-root': {
-                                        borderRadius: 2,
-                                        '&:hover fieldset': {
-                                            borderColor: '#6366f1',
-                                        },
-                                        '&.Mui-focused fieldset': {
-                                            borderColor: '#6366f1',
-                                        },
-                                    },
-                                }}
                             />
                         </Box>
                         
