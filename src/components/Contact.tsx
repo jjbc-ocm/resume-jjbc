@@ -1,7 +1,143 @@
-import { Box, Typography, Container, Paper, Button } from '@mui/material';
-import { Email } from '@mui/icons-material';
+import { useState } from 'react';
+import { 
+    Box, 
+    Typography, 
+    Container, 
+    Paper, 
+    Button, 
+    TextField, 
+    Snackbar, 
+    Alert,
+    CircularProgress
+} from '@mui/material';
+import { Email, Send } from '@mui/icons-material';
+import emailjs from '@emailjs/browser';
+
+interface FormData {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+}
+
+interface FormErrors {
+    name?: string;
+    email?: string;
+    subject?: string;
+    message?: string;
+}
 
 export default function Contact() {
+    const [formData, setFormData] = useState<FormData>({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+    
+    const [errors, setErrors] = useState<FormErrors>({});
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [snackbar, setSnackbar] = useState({
+        open: false,
+        message: '',
+        severity: 'success' as 'success' | 'error'
+    });
+
+    const validateForm = (): boolean => {
+        const newErrors: FormErrors = {};
+        
+        if (!formData.name.trim()) {
+            newErrors.name = 'Name is required';
+        }
+        
+        if (!formData.email.trim()) {
+            newErrors.email = 'Email is required';
+        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            newErrors.email = 'Please enter a valid email address';
+        }
+        
+        if (!formData.subject.trim()) {
+            newErrors.subject = 'Subject is required';
+        }
+        
+        if (!formData.message.trim()) {
+            newErrors.message = 'Message is required';
+        }
+        
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const handleInputChange = (field: keyof FormData) => (
+        event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        const value = event.target.value;
+        setFormData(prev => ({ ...prev, [field]: value }));
+        
+        // Clear error when user starts typing
+        if (errors[field]) {
+            setErrors(prev => ({ ...prev, [field]: undefined }));
+        }
+    };
+
+    const handleSubmit = async (event: React.FormEvent) => {
+        event.preventDefault();
+        
+        if (!validateForm()) {
+            return;
+        }
+        
+        setIsSubmitting(true);
+        
+        try {
+            // EmailJS configuration
+            const templateParams = {
+                from_name: formData.name,
+                from_email: formData.email,
+                subject: formData.subject,
+                message: formData.message,
+                to_email: 'jjbconecodeman@gmail.com, jjbcariaso@gmail.com'
+            };
+            
+            // You'll need to replace these with your actual EmailJS credentials
+            const result = await emailjs.send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID, // Replace with your EmailJS service ID
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Replace with your EmailJS template ID
+                templateParams,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY // Replace with your EmailJS public key
+            );
+            
+            if (result.status === 200) {
+                setSnackbar({
+                    open: true,
+                    message: 'Message sent successfully! I\'ll get back to you soon.',
+                    severity: 'success'
+                });
+                
+                // Reset form
+                setFormData({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                });
+            }
+        } catch (error) {
+            console.error('Email sending failed:', error);
+            setSnackbar({
+                open: true,
+                message: 'Failed to send message. Please try again or contact me directly.',
+                severity: 'error'
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    const handleCloseSnackbar = () => {
+        setSnackbar(prev => ({ ...prev, open: false }));
+    };
+
     return (
         <section id="contact" style={{ 
             minHeight: "100vh", 
@@ -44,47 +180,157 @@ export default function Contact() {
                         mx: 'auto'
                     }}
                 >
-                    <Typography 
-                        variant="body1" 
-                        color="#6b7280" 
-                        sx={{ 
-                            lineHeight: 1.8,
-                            fontSize: '1.1rem',
-                            textAlign: 'center',
-                            mb: 3
-                        }}
-                    >
-                        Contact form will be here...
-                    </Typography>
-                    
-                    <Box sx={{ textAlign: 'center' }}>
-                        <Button
-                            variant="contained"
-                            size="large"
-                            startIcon={<Email />}
-                            sx={{
-                                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-                                color: 'white',
-                                px: 4,
-                                py: 1.5,
-                                borderRadius: 3,
-                                fontSize: '1.1rem',
-                                fontWeight: 600,
-                                textTransform: 'none',
-                                boxShadow: '0 4px 20px rgba(99, 102, 241, 0.3)',
-                                '&:hover': {
-                                    background: 'linear-gradient(135deg, #5b5ee6 0%, #7c3aed 100%)',
-                                    transform: 'translateY(-2px)',
-                                    boxShadow: '0 6px 25px rgba(99, 102, 241, 0.4)'
-                                },
-                                transition: 'all 0.3s ease-in-out'
-                            }}
-                        >
-                            Get In Touch
-                        </Button>
-                    </Box>
+                    <form onSubmit={handleSubmit}>
+                        <Box sx={{ mb: 3 }}>
+                            <TextField
+                                fullWidth
+                                label="Name"
+                                value={formData.name}
+                                onChange={handleInputChange('name')}
+                                error={!!errors.name}
+                                helperText={errors.name}
+                                disabled={isSubmitting}
+                                sx={{
+                                    '& .MuiOutlinedInput-root': {
+                                        borderRadius: 2,
+                                        '&:hover fieldset': {
+                                            borderColor: '#6366f1',
+                                        },
+                                        '&.Mui-focused fieldset': {
+                                            borderColor: '#6366f1',
+                                        },
+                                    },
+                                }}
+                            />
+                        </Box>
+                        
+                        <Box sx={{ mb: 3 }}>
+                            <TextField
+                                fullWidth
+                                label="Email"
+                                type="email"
+                                value={formData.email}
+                                onChange={handleInputChange('email')}
+                                error={!!errors.email}
+                                helperText={errors.email}
+                                disabled={isSubmitting}
+                                sx={{
+                                    '& .MuiOutlinedInput-root': {
+                                        borderRadius: 2,
+                                        '&:hover fieldset': {
+                                            borderColor: '#6366f1',
+                                        },
+                                        '&.Mui-focused fieldset': {
+                                            borderColor: '#6366f1',
+                                        },
+                                    },
+                                }}
+                            />
+                        </Box>
+                        
+                        <Box sx={{ mb: 3 }}>
+                            <TextField
+                                fullWidth
+                                label="Subject"
+                                value={formData.subject}
+                                onChange={handleInputChange('subject')}
+                                error={!!errors.subject}
+                                helperText={errors.subject}
+                                disabled={isSubmitting}
+                                sx={{
+                                    '& .MuiOutlinedInput-root': {
+                                        borderRadius: 2,
+                                        '&:hover fieldset': {
+                                            borderColor: '#6366f1',
+                                        },
+                                        '&.Mui-focused fieldset': {
+                                            borderColor: '#6366f1',
+                                        },
+                                    },
+                                }}
+                            />
+                        </Box>
+                        
+                        <Box sx={{ mb: 4 }}>
+                            <TextField
+                                fullWidth
+                                label="Message"
+                                multiline
+                                rows={4}
+                                value={formData.message}
+                                onChange={handleInputChange('message')}
+                                error={!!errors.message}
+                                helperText={errors.message}
+                                disabled={isSubmitting}
+                                sx={{
+                                    '& .MuiOutlinedInput-root': {
+                                        borderRadius: 2,
+                                        '&:hover fieldset': {
+                                            borderColor: '#6366f1',
+                                        },
+                                        '&.Mui-focused fieldset': {
+                                            borderColor: '#6366f1',
+                                        },
+                                    },
+                                }}
+                            />
+                        </Box>
+                        
+                        <Box sx={{ textAlign: 'center' }}>
+                            <Button
+                                type="submit"
+                                variant="contained"
+                                size="large"
+                                disabled={isSubmitting}
+                                startIcon={isSubmitting ? <CircularProgress size={20} color="inherit" /> : <Send />}
+                                sx={{
+                                    background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                                    color: 'white',
+                                    px: 4,
+                                    py: 1.5,
+                                    borderRadius: 3,
+                                    fontSize: '1.1rem',
+                                    fontWeight: 600,
+                                    textTransform: 'none',
+                                    boxShadow: '0 4px 20px rgba(99, 102, 241, 0.3)',
+                                    '&:hover': {
+                                        background: 'linear-gradient(135deg, #5b5ee6 0%, #7c3aed 100%)',
+                                        transform: 'translateY(-2px)',
+                                        boxShadow: '0 6px 25px rgba(99, 102, 241, 0.4)'
+                                    },
+                                    '&:disabled': {
+                                        background: '#9ca3af',
+                                        transform: 'none',
+                                        boxShadow: 'none'
+                                    },
+                                    transition: 'all 0.3s ease-in-out'
+                                }}
+                            >
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
+                            </Button>
+                        </Box>
+                    </form>
                 </Paper>
             </Container>
+            
+            <Snackbar
+                open={snackbar.open}
+                autoHideDuration={6000}
+                onClose={handleCloseSnackbar}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+            >
+                <Alert 
+                    onClose={handleCloseSnackbar} 
+                    severity={snackbar.severity}
+                    sx={{ 
+                        width: '100%',
+                        borderRadius: 2,
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.15)'
+                    }}
+                >
+                    {snackbar.message}
+                </Alert>
+            </Snackbar>
         </section>
     );
 }
