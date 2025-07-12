@@ -4,13 +4,13 @@ import {
     Typography, 
     Container, 
     Paper, 
-    Button, 
     TextField, 
     Snackbar, 
     Alert,
     CircularProgress
 } from '@mui/material';
 import { Email, Send } from '@mui/icons-material';
+import { Button } from './ui/Button';
 import emailjs from '@emailjs/browser';
 
 interface FormData {
@@ -279,32 +279,10 @@ export default function Contact() {
                         <Box sx={{ textAlign: 'center' }}>
                             <Button
                                 type="submit"
-                                variant="contained"
+                                variant="primary"
                                 size="large"
-                                disabled={isSubmitting}
-                                startIcon={isSubmitting ? <CircularProgress size={20} color="inherit" /> : <Send />}
-                                sx={{
-                                    background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-                                    color: 'white',
-                                    px: 4,
-                                    py: 1.5,
-                                    borderRadius: 3,
-                                    fontSize: '1.1rem',
-                                    fontWeight: 600,
-                                    textTransform: 'none',
-                                    boxShadow: '0 4px 20px rgba(99, 102, 241, 0.3)',
-                                    '&:hover': {
-                                        background: 'linear-gradient(135deg, #5b5ee6 0%, #7c3aed 100%)',
-                                        transform: 'translateY(-2px)',
-                                        boxShadow: '0 6px 25px rgba(99, 102, 241, 0.4)'
-                                    },
-                                    '&:disabled': {
-                                        background: '#9ca3af',
-                                        transform: 'none',
-                                        boxShadow: 'none'
-                                    },
-                                    transition: 'all 0.3s ease-in-out'
-                                }}
+                                loading={isSubmitting}
+                                startIcon={<Send />}
                             >
                                 {isSubmitting ? 'Sending...' : 'Send Message'}
                             </Button>

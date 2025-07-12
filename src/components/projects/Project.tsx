@@ -1,5 +1,6 @@
 import { Launch, Star } from "@mui/icons-material";
-import { Box, Button, Card, CardActions, CardContent, Divider, Grid, Typography } from "@mui/material";
+import { Box, Card, CardActions, CardContent, Divider, Grid, Typography } from "@mui/material";
+import { Button } from "../ui/Button";
 import { Tools } from "./Tools";
 import { Metrics } from "./Metrics";
 import { Responsibilities } from "./Responsibilities";
@@ -68,22 +69,12 @@ export const Project = (props: IProps) => {
                 <CardActions sx={{ p: 3, pt: 0 }}>
                     {props.project.url && (
                         <Button
-                            variant="contained"
+                            variant="project"
                             size="medium"
                             startIcon={<Launch />}
                             href={props.project.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            sx={{
-                                borderRadius: 2,
-                                textTransform: 'none',
-                                fontWeight: 600,
-                                px: 3,
-                                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-                                '&:hover': {
-                                    background: 'linear-gradient(135deg, #5b5ee6 0%, #7c3aed 100%)'
-                                }
-                            }}
                         >
                             View Project
                         </Button>

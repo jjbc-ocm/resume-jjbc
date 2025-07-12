@@ -1,5 +1,5 @@
-import { Box, Typography, Button, Container } from '@mui/material';
-import { Link } from "react-scroll";
+import { Box, Typography, Container } from '@mui/material';
+import { Button } from './ui/Button';
 
 export default function Header() {
     return (
@@ -54,29 +54,10 @@ export default function Header() {
                         From real-time multiplayer games to WebGL blockchain projects, I bring ideas to life with clean code, smooth gameplay, and thoughtful UX.
                     </Typography>
                     <Button
-                        component={Link}
-                        to="projects"
-                        smooth={true}
-                        duration={500}
-                        variant="contained"
+                        variant="primary"
                         size="large"
-                        sx={{
-                            background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-                            color: 'white',
-                            px: 4,
-                            py: 1.5,
-                            borderRadius: 3,
-                            fontSize: '1.1rem',
-                            fontWeight: 600,
-                            textTransform: 'none',
-                            boxShadow: '0 4px 20px rgba(99, 102, 241, 0.3)',
-                            '&:hover': {
-                                background: 'linear-gradient(135deg, #5b5ee6 0%, #7c3aed 100%)',
-                                transform: 'translateY(-2px)',
-                                boxShadow: '0 6px 25px rgba(99, 102, 241, 0.4)'
-                            },
-                            transition: 'all 0.3s ease-in-out'
-                        }}
+                        scrollTo="projects"
+                        scrollDuration={500}
                     >
                         View My Work
                     </Button>
