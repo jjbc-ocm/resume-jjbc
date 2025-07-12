@@ -8,6 +8,7 @@
             {
                 "name": "Avalorians",
                 "url": "https://avalorians.io/",
+                "imageUrl": "/src/assets/img/avalorians-new-logo.webp",
                 "description": "Telegram PvP Clash Royale-like game with reward-based progression.",
                 "metrics": [
                     {
@@ -80,6 +81,7 @@
             {
                 "name": "Dummy Pirates",
                 "url": "https://store.steampowered.com/app/2261610/Dummy_Pirates_Ocean_Tales/",
+                "imageUrl": "/src/assets/img/dummy-pirates.jpg",
                 "description": "Multiplayer Sea Battle Arena with unique ships and abilities.",
                 "metrics": [],
                 "tools": [
@@ -93,6 +95,7 @@
             {
                 "name": "Cyberdogz",
                 "url": "https://x.com/gocyberdogz?lang=en",
+                "imageUrl": "/src/assets/img/cyberdogz.jpg",
                 "description": "Web-based game experience featuring NFT-integrated gameplay.",
                 "tools": [
                     "Unity",
@@ -112,6 +115,7 @@
             {
                 "name": "Event Horizon: Space Shooter",
                 "url": "https://play.google.com/store/apps/details?id=com.bardak.ssg&hl=en",
+                "imageUrl": "/src/assets/img/event-horizon.webp",
                 "description": "Top-down space shooter with partial damage mechanics and ship variety.",
                 "metrics": [
                     {
