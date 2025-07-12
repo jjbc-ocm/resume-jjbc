@@ -1,0 +1,137 @@
+[
+    {
+        "client": "Cloud Node OPC",
+        "duration": "May 2024 - Aug 2025",
+        "url": "",
+        "certificateUrl": "",
+        "projects": [
+            {
+                "name": "Avalorians",
+                "url": "https://avalorians.io/",
+                "description": "Telegram PvP Clash Royale-like game with reward-based progression.",
+                "metrics": [
+                    {
+                        "type": "Codebase size",
+                        "value": "Contributed to ~40% of the codebase (904+ commits on frontend, 207+ commits on multiplayer server)"
+                    },
+                    {
+                        "type": "Features shipped",
+                        "value": "Shipped 12+ major features including real-time multiplayer gameplay, city building system, and UI state transitions"
+                    },
+                    {
+                        "type": "Performance gains",
+                        "value": "Reduced matchmaker latency by 60% and implemented adaptive delta timing to stabilize frame rate across devices"
+                    },
+                    {
+                        "type": "API integration",
+                        "value": "Integrated 40+ external and internal APIs across the project"
+                    },
+                    {
+                        "type": "Mentorship",
+                        "value": "Mentored a junior frontend dev and reviewed 484+ PRs across multiple repositories"
+                    },
+                    {
+                        "type": "Animations/VFX",
+                        "value": "Integrated 50+ spritesheet animations and implemented 3+ particle-based VFX for battles and UI transitions"
+                    },
+                    {
+                        "type": "UI Screens",
+                        "value": "Designed and built 30+ UI screens for city-building, PvP battles, onboarding, and monetization"
+                    },
+                    {
+                        "type": "Game Mechanics",
+                        "value": "Implemented 2 core gameplay mechanics: real-time PvP combat and base-building with production timers"
+                    },
+                    {
+                        "type": "Meta Progression",
+                        "value": "Integrated 4 meta systems: Leaderboards, Referral Rewards, Card Gacha system, and Shop"
+                    },
+                    {
+                        "type": "Session Handling",
+                        "value": "Scaled multiplayer server to support 100+ concurrent game sessions while maintaining low CPU and memory usage"
+                    }
+                ],
+                "tools": [
+                    "Unity",
+                    "C#",
+                    "Unity Gaming Services",
+                    "Telegram SDK",
+                    "Phaser 3",
+                    "Colyseus",
+                    "AWS",
+                    "AI-generated visuals"
+                ],
+                "role": "Lead Frontend & Multiplayer Game Developer",
+                "responsibilities": [
+                    "Designed UI/UX for mobile & Telegram platform",
+                    "Led development of gameplay systems (city building, PvP battles)",
+                    "Implemented sprite animation and visual effects",
+                    "Built and maintained multiplayer server with Colyseus",
+                    "Managed and mentored junior frontend developer (UI)"
+                ]
+            }
+        ]
+    },
+    {
+        "client": "Good Place Games",
+        "duration": "Apr 2022 - May 2024",
+        "url": "https://www.goodplace.games/about-1",
+        "projects": [
+            {
+                "name": "Dummy Pirates",
+                "url": "https://store.steampowered.com/app/2261610/Dummy_Pirates_Ocean_Tales/",
+                "description": "Multiplayer Sea Battle Arena with unique ships and abilities.",
+                "metrics": [],
+                "tools": [
+                    "Unity",
+                    "C#",
+                    "Steam SDK"
+                ],
+                "role": "Game Developer",
+                "responsibilities": []
+            },
+            {
+                "name": "Cyberdogz",
+                "url": "https://x.com/gocyberdogz?lang=en",
+                "description": "Web-based game experience featuring NFT-integrated gameplay.",
+                "tools": [
+                    "Unity",
+                    "C#",
+                    "Unity WebGL"
+                ],
+                "role": "Game Developer",
+                "responsibilities": []
+            }
+        ]
+    },
+    {
+        "client": "Bardak",
+        "duration": "Aug 2023 - Dec 2023",
+        "url": "https://play.google.com/store/apps/dev?id=8890811242161022509&hl=en",
+        "projects": [
+            {
+                "name": "Event Horizon: Space Shooter",
+                "url": "https://play.google.com/store/apps/details?id=com.bardak.ssg&hl=en",
+                "description": "Top-down space shooter with partial damage mechanics and ship variety.",
+                "metrics": [
+                    {
+                        "type": "Downloads",
+                        "value": "50,000+ Downloads (as of July 2025)"
+                    }
+                ],
+                "tools": [
+                    "Unity",
+                    "C#",
+                    "Unity Gaming Services",
+                    "Admob SDK"
+                ],
+                "role": "Game Developer",
+                "responsibilities": [
+                    "Developed full gameplay loop from start to finish",
+                    "Implemented partial destruction mechanic (e.g., destroy ship guns only)",
+                    "Created achievement, level progression, and upgrade systems"
+                ]
+            }
+        ]
+    }
+]
