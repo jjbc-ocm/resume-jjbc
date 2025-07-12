@@ -8,7 +8,7 @@
             {
                 "name": "Avalorians",
                 "url": "https://avalorians.io/",
-                "imageUrl": "/src/assets/img/avalorians-new-logo.webp",
+                "imageUrl": "/assets/img/avalorians-new-logo.webp",
                 "description": "Telegram PvP Clash Royale-like game with reward-based progression.",
                 "metrics": [
                     {
@@ -64,7 +64,7 @@
                 ],
                 "role": "Lead Frontend & Multiplayer Game Developer",
                 "responsibilities": [
-                    "Designed UI/UX for mobile & Telegram platform",
+                    "Implemented pixel-perfect UI/UX from Figma designs for mobile & Telegram platform",
                     "Led development of gameplay systems (city building, PvP battles)",
                     "Implemented sprite animation and visual effects",
                     "Built and maintained multiplayer server with Colyseus",
@@ -81,7 +81,7 @@
             {
                 "name": "Dummy Pirates",
                 "url": "https://store.steampowered.com/app/2261610/Dummy_Pirates_Ocean_Tales/",
-                "imageUrl": "/src/assets/img/dummy-pirates.jpg",
+                "imageUrl": "/assets/img/dummy-pirates.jpg",
                 "description": "Multiplayer Sea Battle Arena with unique ships and abilities.",
                 "metrics": [],
                 "tools": [
@@ -95,7 +95,7 @@
             {
                 "name": "Cyberdogz",
                 "url": "https://x.com/gocyberdogz?lang=en",
-                "imageUrl": "/src/assets/img/cyberdogz.jpg",
+                "imageUrl": "/assets/img/cyberdogz.jpg",
                 "description": "Web-based game experience featuring NFT-integrated gameplay.",
                 "tools": [
                     "Unity",
@@ -115,7 +115,7 @@
             {
                 "name": "Event Horizon: Space Shooter",
                 "url": "https://play.google.com/store/apps/details?id=com.bardak.ssg&hl=en",
-                "imageUrl": "/src/assets/img/event-horizon.webp",
+                "imageUrl": "/assets/img/event-horizon.webp",
                 "description": "Top-down space shooter with partial damage mechanics and ship variety.",
                 "metrics": [
                     {
