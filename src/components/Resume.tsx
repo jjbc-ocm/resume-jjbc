@@ -19,13 +19,13 @@ function renderResumeContent() {
     return `
     <div id="resume-section" style="font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif; background: white; color: #1f2937; padding: 40px; max-width: 900px; margin: auto;">
         <div style="text-align: center; margin-bottom: 32px;">
-            <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">Jilmer B. Cariaso</h1>
+            <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">Jilmer John Cariaso</h1>
             <h2 style="font-size: 1.25rem; font-weight: 600; color: #6b7280; margin-bottom: 0.5rem;">Software Developer</h2>
             <div style="color: #6b7280; font-size: 1rem;">jjbconecodeman@gmail.com • 
-                <a href="https://jjbc-ocm-resume.netlify.app/" target="_blank" rel="noopener noreferrer" style="color: #6366f1; text-decoration: none; font-weight: 500;">
+                <a href="${aboutData.portfolio_url}" target="_blank" rel="noopener noreferrer" style="color: #6366f1; text-decoration: none; font-weight: 500;">
                     Portfolio
                 </a> • 
-                <a href="https://github.com/jjbc-ocm" target="_blank" rel="noopener noreferrer" style="color: #6366f1; text-decoration: none; font-weight: 500;">
+                <a href="${aboutData.github_url}" target="_blank" rel="noopener noreferrer" style="color: #6366f1; text-decoration: none; font-weight: 500;">
                     GitHub
                 </a>
             </div>
@@ -34,6 +34,13 @@ function renderResumeContent() {
         <div style="margin-bottom: 32px;">
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Summary</h3>
             <div style="font-size: 1rem; color: #374151; line-height: 1.6;">${aboutData.short_summary}</div>
+        </div>
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e5e7eb;" />
+        <div style="margin-bottom: 32px;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;">Technical Skills</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                ${aboutData.technologies.map((tech) => `<span style="background: #6366f1; color: white; font-weight: 500; font-size: 0.95rem; padding: 2px 12px; border-radius: 16px; display: inline-block; margin-bottom: 2px; margin-right: 4px; letter-spacing: 0.5px; vertical-align: middle;">${tech}</span>`).join('')}
+            </div>
         </div>
         <hr style="margin: 32px 0; border: none; border-top: 1px solid #e5e7eb;" />
         <div style="margin-bottom: 32px;">
@@ -50,7 +57,7 @@ function renderResumeContent() {
                             <div style="font-size: 0.98rem; color: #6b7280; margin-bottom: 4px;">${project.description}</div>
                             ${project.metrics && project.metrics.length > 0 ? `
                                 <ul style="margin-left: 18px; margin-bottom: 4px;">
-                                    ${project.metrics.map((metric) => `<li style="font-size: 0.95rem; color: #374151; margin-bottom: 2px;"><b>${metric.type}:</b> ${metric.value}</li>`).join('')}
+                                    ${project.metrics.map((metric) => `<li style="font-size: 0.95rem; color: #374151; margin-bottom: 2px;">${metric.value}</li>`).join('')}
                                 </ul>
                             ` : project.responsibilities && project.responsibilities.length > 0 ? `
                                 <ul style="margin-left: 18px; margin-bottom: 4px;">
@@ -64,13 +71,6 @@ function renderResumeContent() {
                     `).join('')}
                 </div>
             `).join('')}
-        </div>
-        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e5e7eb;" />
-        <div style="margin-bottom: 32px;">
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Technical Skills</h3>
-            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                ${aboutData.technologies.map((tech) => `<span style="background: #6366f1; color: white; font-weight: 500; font-size: 0.95rem; padding: 2px 12px; border-radius: 16px; display: inline-block; margin-bottom: 2px; margin-right: 4px; letter-spacing: 0.5px; vertical-align: middle;">${tech}</span>`).join('')}
-            </div>
         </div>
         ${aboutData.education && aboutData.education.length > 0 ? `
         <hr style="margin: 32px 0; border: none; border-top: 1px solid #e5e7eb;" />
@@ -102,7 +102,7 @@ export default function Resume() {
     const handleOpenPrintWindow = () => {
         const printWindow = window.open('', '_blank', 'width=1024,height=800');
         if (printWindow) {
-            printWindow.document.write(`<!DOCTYPE html><html><head><title>Jilmer B. Cariaso Resume</title></head><body>${renderResumeContent()}</body></html>`);
+            printWindow.document.write(`<!DOCTYPE html><html><head><title>Jilmer John Cariaso Resume</title></head><body>${renderResumeContent()}</body></html>`);
             printWindow.document.close();
         }
     };
@@ -135,7 +135,7 @@ export default function Resume() {
                     <Typography variant="h6" color="#d1d5db" sx={{ fontWeight: 400, mb: 3 }}>
                         Professional Experience & Skills
                     </Typography>
-                    {/* <Button
+                    <Button
                         variant="contained"
                         startIcon={<Download />}
                         onClick={handleOpenPrintWindow}
@@ -160,7 +160,7 @@ export default function Resume() {
                         }}
                     >
                         Open in New Window
-                    </Button> */}
+                    </Button>
                     <Button
                         variant="contained"
                         startIcon={<Download />}
@@ -207,7 +207,7 @@ export default function Resume() {
                     {/* Header */}
                     <Box sx={{ textAlign: 'center', mb: 4 }}>
                         <Typography variant="h3" component="h1" sx={{ fontWeight: 700, color: '#1f2937', mb: 1 }}>
-                            Jilmer B. Cariaso
+                            Jilmer John Cariaso
                         </Typography>
                         <Typography variant="h6" color="#6b7280" sx={{ mb: 2 }}>
                             Software Developer
@@ -215,7 +215,7 @@ export default function Resume() {
                         <Typography variant="body1" color="#6b7280">
                             jjbconecodeman@gmail.com •{' '}
                             <a
-                                href="https://jjbc-ocm-resume.netlify.app/"
+                                href={aboutData.portfolio_url}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{ color: '#6366f1', textDecoration: 'none', fontWeight: 500 }}
@@ -224,7 +224,7 @@ export default function Resume() {
                             </a>{' '}
                             •{' '}
                             <a
-                                href="https://github.com/jjbc-ocm"
+                                href={aboutData.github_url}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{ color: '#6366f1', textDecoration: 'none', fontWeight: 500 }}
@@ -244,6 +244,28 @@ export default function Resume() {
                         <Typography variant="body1" color="#374151" sx={{ lineHeight: 1.6 }}>
                             {aboutData.short_summary}
                         </Typography>
+                    </Box>
+
+                    <Divider sx={{ mb: 4 }} />
+
+                    {/* Skills */}
+                    <Box sx={{ mb: 4 }}>
+                        <Typography variant="h5" component="h2" sx={{ fontWeight: 600, color: '#1f2937', mb: 2 }}>
+                            Technical Skills
+                        </Typography>
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                            {aboutData.technologies.map((tech, index) => (
+                                <Chip 
+                                    key={index}
+                                    label={tech}
+                                    sx={{ 
+                                        backgroundColor: '#6366f1',
+                                        color: 'white',
+                                        fontWeight: 500
+                                    }}
+                                />
+                            ))}
+                        </Box>
                     </Box>
 
                     <Divider sx={{ mb: 4 }} />
@@ -280,7 +302,7 @@ export default function Resume() {
                                                 {project.metrics.map((metric, metricIndex) => (
                                                     <ListItem key={metricIndex} sx={{ py: 0.5 }}>
                                                         <ListItemText 
-                                                            primary={`• ${metric.type}: ${metric.value}`}
+                                                            primary={`• ${metric.value}`}
                                                             sx={{
                                                                 '& .MuiListItemText-primary': {
                                                                     color: '#374151',
@@ -331,28 +353,6 @@ export default function Resume() {
                                 ))}
                             </Box>
                         ))}
-                    </Box>
-
-                    <Divider sx={{ mb: 4 }} />
-
-                    {/* Skills */}
-                    <Box sx={{ mb: 4 }}>
-                        <Typography variant="h5" component="h2" sx={{ fontWeight: 600, color: '#1f2937', mb: 2 }}>
-                            Technical Skills
-                        </Typography>
-                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                            {aboutData.technologies.map((tech, index) => (
-                                <Chip 
-                                    key={index}
-                                    label={tech}
-                                    sx={{ 
-                                        backgroundColor: '#6366f1',
-                                        color: 'white',
-                                        fontWeight: 500
-                                    }}
-                                />
-                            ))}
-                        </Box>
                     </Box>
 
                     {/* Education */}
