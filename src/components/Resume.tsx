@@ -135,7 +135,7 @@ export default function Resume() {
                     <Typography variant="h6" color="#d1d5db" sx={{ fontWeight: 400, mb: 3 }}>
                         Professional Experience & Skills
                     </Typography>
-                    <Button
+                    {/* <Button
                         variant="contained"
                         startIcon={<Download />}
                         onClick={handleOpenPrintWindow}
@@ -160,7 +160,7 @@ export default function Resume() {
                         }}
                     >
                         Open in New Window
-                    </Button>
+                    </Button> */}
                     <Button
                         variant="contained"
                         startIcon={<Download />}
