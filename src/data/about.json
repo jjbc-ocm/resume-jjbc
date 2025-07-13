@@ -1,9 +1,10 @@
 {
     "bio": [
         "Hey, I'm Jilmer — a developer who loves turning game ideas into playable realities. I've worked across a variety of projects, from fast-paced PvP games on Telegram to space shooters with 50,000+ downloads. My favorite part of game dev is making things *feel* good — whether it's a snappy UI, satisfying combat, or smooth multiplayer.",
-        "I specialize in React, TypeScript, and multiplayer game development with Colyseus. I'm big on performance optimization, clean UI design, and shipping features that actually make a difference.",
+        "I specialize in React, TypeScript, and multiplayer game development with Colyseus, having evolved from Unity development to focus on web-based gaming. I'm big on performance optimization, clean UI design, and shipping features that actually make a difference.",
         "When I'm not coding, you'll probably find me lifting weights, reading about game balance theory, or exploring new indie titles for inspiration. I'm always learning and always building."
     ],
+    "short_summary": "Software developer with 5+ years of experience specializing in React, TypeScript, and multiplayer game development. Led development of web-based games reaching 100,000+ players with focus on performance optimization and scalable architecture.",
     "technologies": [
         "React",
         "Colyseus",
@@ -32,6 +33,19 @@
         {
             "icon": "Loop",
             "text": "Led multiplayer server handling 100+ sessions concurrently"
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Science in Computer Science",
+            "school": "Our Lady of Fatima University, QC Campus",
+            "duration": "2015 - 2019"
+        }
+    ],
+    "references": [
+        {
+            "name": "",
+            "contacts": []
         }
     ]
 }

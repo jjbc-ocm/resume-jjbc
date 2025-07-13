@@ -12,43 +12,23 @@
                 "description": "Telegram PvP Clash Royale-like game with reward-based progression.",
                 "metrics": [
                     {
-                        "type": "Codebase size",
-                        "value": "Contributed to ~40% of the codebase (904+ commits on frontend, 207+ commits on multiplayer server)"
+                        "type": "Leadership",
+                        "value": "Mentored a junior frontend developer and led development of core gameplay systems"
+                    },
+                    {
+                        "type": "Codebase contribution",
+                        "value": "Contributed to ~60% of the codebase (904+ commits on frontend, 207+ commits on multiplayer server)"
                     },
                     {
                         "type": "Features shipped",
                         "value": "Shipped 12+ major features including real-time multiplayer gameplay, city building system, and UI state transitions"
                     },
                     {
-                        "type": "Performance gains",
-                        "value": "Reduced matchmaker latency by 60% and implemented adaptive delta timing to stabilize frame rate across devices"
+                        "type": "Performance optimization",
+                        "value": "Reduced matchmaker latency by 50% and implemented adaptive delta timing to stabilize frame rate across devices"
                     },
                     {
-                        "type": "API integration",
-                        "value": "Integrated 40+ external and internal APIs across the project"
-                    },
-                    {
-                        "type": "Mentorship",
-                        "value": "Mentored a junior frontend dev and reviewed 484+ PRs across multiple repositories"
-                    },
-                    {
-                        "type": "Animations/VFX",
-                        "value": "Integrated 50+ spritesheet animations and implemented 3+ particle-based VFX for battles and UI transitions"
-                    },
-                    {
-                        "type": "UI Screens",
-                        "value": "Designed and built 30+ UI screens for city-building, PvP battles, onboarding, and monetization"
-                    },
-                    {
-                        "type": "Game Mechanics",
-                        "value": "Implemented 2 core gameplay mechanics: real-time PvP combat and base-building with production timers"
-                    },
-                    {
-                        "type": "Meta Progression",
-                        "value": "Integrated 4 meta systems: Leaderboards, Referral Rewards, Card Gacha system, and Shop"
-                    },
-                    {
-                        "type": "Session Handling",
+                        "type": "Scalability",
                         "value": "Scaled multiplayer server to support 100+ concurrent game sessions while maintaining low CPU and memory usage"
                     }
                 ],
@@ -111,7 +91,7 @@
                     "Metamask",
                     "Solana"
                 ],
-                "role": "Jr. Game Developer",
+                "role": "Game Developer",
                 "responsibilities": [
                     "Developed utility tools for MetaMask and Solana wallet integration to support lead developer's workflow"
                 ]
@@ -191,7 +171,7 @@
                 "metrics": [],
                 "tools": [
                     "Angular JS",
-                    "Lavascript",
+                    "Javascript",
                     "HTML",
                     "CSS",
                     "Spring Boot",

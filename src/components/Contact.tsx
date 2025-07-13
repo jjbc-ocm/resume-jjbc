@@ -6,9 +6,11 @@ import {
     Paper, 
     Snackbar, 
     Alert,
-    CircularProgress
+    CircularProgress,
+    Grid,
+    Link
 } from '@mui/material';
-import { Email, Send } from '@mui/icons-material';
+import { Email, Send, GitHub, LinkedIn, Description } from '@mui/icons-material';
 import { Button } from './ui/Button';
 import { TextField } from './ui/TextField';
 import emailjs from '@emailjs/browser';
@@ -166,6 +168,54 @@ export default function Contact() {
                     <Typography variant="h6" color="#d1d5db" sx={{ fontWeight: 400 }}>
                         Let's work together
                     </Typography>
+                </Box>
+
+                {/* Social Links */}
+                <Box sx={{ textAlign: 'center', mb: 4 }}>
+                    <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>
+                        <Link 
+                            href="https://github.com/jjbc-ocm" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            sx={{ 
+                                display: 'inline-flex', 
+                                alignItems: 'center', 
+                                color: '#d1d5db', 
+                                textDecoration: 'none',
+                                p: 1,
+                                borderRadius: 1,
+                                transition: 'all 0.3s ease',
+                                '&:hover': {
+                                    color: '#6366f1',
+                                    backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                                    transform: 'translateY(-2px)'
+                                }
+                            }}
+                        >
+                            <GitHub sx={{ fontSize: 24, mr: 1 }} />
+                            <Typography variant="body1">GitHub</Typography>
+                        </Link>
+                        <Link 
+                            href="/resume" 
+                            sx={{ 
+                                display: 'inline-flex', 
+                                alignItems: 'center', 
+                                color: '#d1d5db', 
+                                textDecoration: 'none',
+                                p: 1,
+                                borderRadius: 1,
+                                transition: 'all 0.3s ease',
+                                '&:hover': {
+                                    color: '#6366f1',
+                                    backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                                    transform: 'translateY(-2px)'
+                                }
+                            }}
+                        >
+                            <Description sx={{ fontSize: 24, mr: 1 }} />
+                            <Typography variant="body1">Resume</Typography>
+                        </Link>
+                    </Box>
                 </Box>
                 
                 <Paper 

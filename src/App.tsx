@@ -5,6 +5,7 @@ import Header from './components/Header'
 import About from './components/About'
 import Projects from './components/projects/Projects'
 import Contact from './components/Contact'
+import Resume from './components/Resume'
 
 // Create a custom theme with our cohesive color palette
 const theme = createTheme({
@@ -86,6 +87,7 @@ function App() {
       <About />
       <Projects />
       <Contact />
+      <Resume />
     </ThemeProvider>
   )
 }

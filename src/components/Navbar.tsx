@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, Box, Container } from '@mui/material';
 import { Button } from './ui/Button';
-import { Home, Info, Work, ContactMail } from '@mui/icons-material';
+import { Home, Info, Work, ContactMail, Description } from '@mui/icons-material';
 
 export default function Navbar() {
 
@@ -9,7 +9,8 @@ export default function Navbar() {
         { to: 'home', label: 'Home', icon: <Home /> },
         { to: 'about', label: 'About', icon: <Info /> },
         { to: 'projects', label: 'Projects', icon: <Work /> },
-        { to: 'contact', label: 'Contact', icon: <ContactMail /> }
+        { to: 'contact', label: 'Contact', icon: <ContactMail /> },
+        { to: 'resume', label: 'Resume', icon: <Description /> }
     ];
 
     // Helper method to render navigation buttons
