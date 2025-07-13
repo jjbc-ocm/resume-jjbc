@@ -108,7 +108,7 @@ export default function Resume() {
     };
 
     return (
-        <div id="resume-section" style={{ 
+        <div id="resume" style={{ 
             minHeight: "100vh", 
             background: "linear-gradient(135deg, #1f2937 0%, #374151 100%)",
             padding: "80px 0"
