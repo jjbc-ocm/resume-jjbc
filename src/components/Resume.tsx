@@ -135,7 +135,7 @@ export default function Resume() {
                     <Typography variant="h6" color="#d1d5db" sx={{ fontWeight: 400, mb: 3 }}>
                         Professional Experience & Skills
                     </Typography>
-                    <Button
+                    {/* <Button
                         variant="contained"
                         startIcon={<Download />}
                         onClick={handleOpenPrintWindow}
@@ -155,10 +155,38 @@ export default function Resume() {
                             },
                             '@media print': {
                                 display: 'none'
-                            }
+                            },
+                            my: 1
                         }}
                     >
                         Open in New Window
+                    </Button> */}
+                    <Button
+                        variant="contained"
+                        startIcon={<Download />}
+                        href="/assets/pdf/Jilmer John Cariaso.pdf"
+                        download="Jilmer John Cariaso.pdf"
+                        sx={{
+                            background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                            color: 'white',
+                            px: 3,
+                            py: 1.5,
+                            borderRadius: 2,
+                            fontWeight: 600,
+                            textTransform: 'none',
+                            boxShadow: '0 4px 20px rgba(99, 102, 241, 0.3)',
+                            '&:hover': {
+                                background: 'linear-gradient(135deg, #5b5ee6 0%, #7c3aed 100%)',
+                                transform: 'translateY(-2px)',
+                                boxShadow: '0 6px 25px rgba(99, 102, 241, 0.4)'
+                            },
+                            '@media print': {
+                                display: 'none'
+                            },
+                            my: 1
+                        }}
+                    >
+                        Download PDF
                     </Button>
                 </Box>
 
