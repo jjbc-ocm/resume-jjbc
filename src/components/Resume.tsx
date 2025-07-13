@@ -164,8 +164,8 @@ export default function Resume() {
                     <Button
                         variant="contained"
                         startIcon={<Download />}
-                        href="/assets/pdf/Jilmer John Cariaso.pdf"
-                        download="Jilmer John Cariaso.pdf"
+                        href="/assets/pdf/Jilmer Cariaso Resume.pdf"
+                        download="Jilmer Cariaso Resume.pdf"
                         sx={{
                             background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
                             color: 'white',
