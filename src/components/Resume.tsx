@@ -23,10 +23,10 @@ function renderResumeContent() {
             <h2 style="font-size: 1.25rem; font-weight: 600; color: #6b7280; margin-bottom: 0.5rem;">Software Developer</h2>
             <div style="color: #6b7280; font-size: 1rem;">jjbconecodeman@gmail.com • 
                 <a href="https://jjbc-ocm-resume.netlify.app/" target="_blank" rel="noopener noreferrer" style="color: #6366f1; text-decoration: none; font-weight: 500;">
-                    jjbc-ocm-resume.netlify.app
+                    Portfolio
                 </a> • 
                 <a href="https://github.com/jjbc-ocm" target="_blank" rel="noopener noreferrer" style="color: #6366f1; text-decoration: none; font-weight: 500;">
-                    github.com/jjbc-ocm
+                    GitHub
                 </a>
             </div>
         </div>
@@ -192,7 +192,7 @@ export default function Resume() {
                                 rel="noopener noreferrer"
                                 style={{ color: '#6366f1', textDecoration: 'none', fontWeight: 500 }}
                             >
-                                jjbc-ocm-resume.netlify.app
+                                Portfolio
                             </a>{' '}
                             •{' '}
                             <a
@@ -201,7 +201,7 @@ export default function Resume() {
                                 rel="noopener noreferrer"
                                 style={{ color: '#6366f1', textDecoration: 'none', fontWeight: 500 }}
                             >
-                                github.com/jjbc-ocm
+                                GitHub
                             </a>
                         </Typography>
                     </Box>
