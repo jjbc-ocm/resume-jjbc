@@ -3,12 +3,16 @@ import { Person } from '@mui/icons-material';
 import BuildIcon from '@mui/icons-material/Build';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import LoopIcon from '@mui/icons-material/Loop';
+import DevicesIcon from '@mui/icons-material/Devices';
+import SpeedIcon from '@mui/icons-material/Speed';
 import aboutData from '../data/about.json';
 
 const iconMap = {
     Build: <BuildIcon color="primary" />,
     SportsEsports: <SportsEsportsIcon color="secondary" />,
-    Loop: <LoopIcon color="success" />
+    Loop: <LoopIcon color="success" />,
+    Devices: <DevicesIcon color="primary" />,
+    Speed: <SpeedIcon color="success" />
 };
 
 export default function About() {

@@ -37,7 +37,7 @@ export default function Header() {
                             fontSize: { xs: '1.2rem', md: '1.7rem' }
                         }}
                     >
-                        I build games and interactive web experiences that blend creativity with performance.
+                        I build responsive web applications and interactive experiences that blend creativity with performance.
                     </Typography>
                     <Typography 
                         variant="body1" 
@@ -51,7 +51,7 @@ export default function Header() {
                             lineHeight: 1.7
                         }}
                     >
-                        From real-time multiplayer games to WebGL blockchain projects, I bring ideas to life with clean code, smooth gameplay, and thoughtful UX.
+                        From modern web applications to interactive games, I bring ideas to life with clean code, responsive design, and thoughtful user experience.
                     </Typography>
                     <Button
                         variant="primary"

@@ -13,7 +13,7 @@
                 "metrics": [
                     {
                         "type": "Leadership",
-                        "value": "Mentored a junior frontend developer and led development of core gameplay systems"
+                        "value": "Mentored a junior frontend developer and led development of core gameplay systems and responsive UI components"
                     },
                     {
                         "type": "Codebase contribution",
@@ -25,7 +25,7 @@
                     },
                     {
                         "type": "Performance optimization",
-                        "value": "Reduced matchmaker latency by 50% and implemented adaptive delta timing to stabilize frame rate across devices"
+                        "value": "Reduced frontend load times by 50% and implemented adaptive delta timing to stabilize frame rate across devices"
                     },
                     {
                         "type": "Scalability",
@@ -34,15 +34,17 @@
                 ],
                 "tools": [
                     "React",
-                    "Phaser 3",
-                    "Colyseus",
                     "TypeScript",
                     "HTML",
                     "CSS",
+                    "Responsive Design",
+                    "Mobile-First",
+                    "Phaser 3",
+                    "Colyseus",
                     "Telegram SDK",
                     "ChatGPT"
                 ],
-                "role": "Lead Web Game Developer",
+                "role": "Lead Frontend Developer",
                 "responsibilities": [
                     "Managed and mentored junior frontend developer (UI)",
                     "Implemented pixel-perfect UI/UX from Figma designs for mobile & Telegram platform",

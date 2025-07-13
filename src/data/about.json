@@ -1,40 +1,41 @@
 {
     "bio": [
-        "Hey, I'm Jilmer — a developer who loves turning game ideas into playable realities. I've worked across a variety of projects, from fast-paced PvP games on Telegram to space shooters with 50,000+ downloads. My favorite part of game dev is making things *feel* good — whether it's a snappy UI, satisfying combat, or smooth multiplayer.",
-        "I specialize in React, TypeScript, and multiplayer game development with Colyseus, having evolved from Unity development to focus on web-based gaming. I'm big on performance optimization, clean UI design, and shipping features that actually make a difference.",
-        "When I'm not coding, you'll probably find me lifting weights, reading about game balance theory, or exploring new indie titles for inspiration. I'm always learning and always building."
+        "Hey, I'm Jilmer — a frontend developer who loves creating user-friendly web experiences. I've worked across a variety of projects, from modern web applications to interactive games with 10,000+ users. My favorite part of web development is making interfaces that *feel* great — whether it's a smooth user experience, design that works on any device, or intuitive UI that users love.",
+        "I specialize in React, TypeScript, and modern frontend development, with expertise in responsive design, performance optimization, and scalable component architecture. I'm passionate about clean code, accessibility, and shipping features that actually make a difference to users.",
+        "When I'm not coding, you'll probably find me lifting weights, reading about UX design principles, or exploring new frontend technologies for inspiration. I'm always learning and always building."
     ],
-    "short_summary": "Software developer with 5+ years of experience specializing in React, TypeScript, and multiplayer game development. Led development of web-based games reaching 100,000+ players with focus on performance optimization and scalable architecture.",
+    "short_summary": "Frontend developer with 5+ years of experience specializing in React, TypeScript, and modern web development. Led development of web applications and interactive games reaching 10,000+ users with focus on responsive design, performance optimization, and scalable architecture.",
     "portfolio_url": "https://jjbc-portfolio.netlify.app/",
     "github_url": "https://github.com/jjbc-ocm",
     "technologies": [
         "React",
-        "Colyseus",
-        "Unity",
         "TypeScript",
-        "Javascript",
+        "JavaScript",
         "HTML",
         "CSS",
-        "C#",
-        "Node.js",
         "Material UI",
+        "Responsive Design",
+        "Node.js",
         "GitHub",
         "GitLab",
         "Cursor",
-        "ChatGPT"
+        "ChatGPT",
+        "Colyseus",
+        "Unity",
+        "C#"
     ],
     "highlights": [
         {
             "icon": "Build",
-            "text": "12+ major features shipped across games"
+            "text": "12+ major frontend features shipped across web applications"
         },
         {
-            "icon": "SportsEsports",
-            "text": "100,000+ players reached across all projects"
+            "icon": "Devices",
+            "text": "Mobile-first responsive design for 10,000+ users"
         },
         {
-            "icon": "Loop",
-            "text": "Led multiplayer server handling 100+ sessions concurrently"
+            "icon": "Speed",
+            "text": "Optimized frontend performance and reduced load times by 50%"
         }
     ],
     "education": [

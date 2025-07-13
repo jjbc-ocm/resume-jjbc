@@ -195,8 +195,13 @@ export default function Contact() {
                             <GitHub sx={{ fontSize: 24, mr: 1 }} />
                             <Typography variant="body1">GitHub</Typography>
                         </Link>
-                        <Link 
-                            href="/resume" 
+                        <Box
+                            onClick={() => {
+                                const el = document.getElementById('resume');
+                                if (el) {
+                                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                            }}
                             sx={{ 
                                 display: 'inline-flex', 
                                 alignItems: 'center', 
@@ -205,6 +210,7 @@ export default function Contact() {
                                 p: 1,
                                 borderRadius: 1,
                                 transition: 'all 0.3s ease',
+                                cursor: 'pointer',
                                 '&:hover': {
                                     color: '#6366f1',
                                     backgroundColor: 'rgba(99, 102, 241, 0.1)',
@@ -214,7 +220,7 @@ export default function Contact() {
                         >
                             <Description sx={{ fontSize: 24, mr: 1 }} />
                             <Typography variant="body1">Resume</Typography>
-                        </Link>
+                        </Box>
                     </Box>
                 </Box>
                 
