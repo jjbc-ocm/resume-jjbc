@@ -53,22 +53,22 @@
                     }
                 ],
                 "tools": [
-                    "Unity",
-                    "C#",
-                    "Unity Gaming Services",
-                    "Telegram SDK",
+                    "React",
                     "Phaser 3",
                     "Colyseus",
-                    "AWS",
-                    "AI-generated visuals"
+                    "TypeScript",
+                    "HTML",
+                    "CSS",
+                    "Telegram SDK",
+                    "ChatGPT"
                 ],
-                "role": "Lead Frontend & Multiplayer Game Developer",
+                "role": "Lead Web Game Developer",
                 "responsibilities": [
+                    "Managed and mentored junior frontend developer (UI)",
                     "Implemented pixel-perfect UI/UX from Figma designs for mobile & Telegram platform",
                     "Led development of gameplay systems (city building, PvP battles)",
                     "Implemented sprite animation and visual effects",
-                    "Built and maintained multiplayer server with Colyseus",
-                    "Managed and mentored junior frontend developer (UI)"
+                    "Built and maintained multiplayer server with Colyseus"
                 ]
             }
         ]
@@ -87,10 +87,16 @@
                 "tools": [
                     "Unity",
                     "C#",
+                    "Photon PUN",
+                    "Unity Gaming Services",
                     "Steam SDK"
                 ],
                 "role": "Game Developer",
-                "responsibilities": []
+                "responsibilities": [
+                    "Integrated 3D models from artists into gameplay mechanics and systems",
+                    "Developed multiplayer game mechanics using Photon PUN networking framework",
+                    "Integrated Steam SDK with Unity Gaming Services for achievement and player progress tracking"
+                ]
             },
             {
                 "name": "Cyberdogz",
@@ -100,22 +106,27 @@
                 "tools": [
                     "Unity",
                     "C#",
-                    "Unity WebGL"
+                    "Firebase",
+                    "WebGL",
+                    "Metamask",
+                    "Solana"
                 ],
-                "role": "Game Developer",
-                "responsibilities": []
+                "role": "Jr. Game Developer",
+                "responsibilities": [
+                    "Developed utility tools for MetaMask and Solana wallet integration to support lead developer's workflow"
+                ]
             }
         ]
     },
     {
-        "client": "Bardak",
+        "client": "Bardak LLC",
         "duration": "Aug 2023 - Dec 2023",
         "url": "https://play.google.com/store/apps/dev?id=8890811242161022509&hl=en",
         "projects": [
             {
                 "name": "Event Horizon: Space Shooter",
                 "url": "https://play.google.com/store/apps/details?id=com.bardak.ssg&hl=en",
-                "imageUrl": "/assets/img/event-horizon.webp",
+                "imageUrl": "/assets/img/event-horizon.png",
                 "description": "Top-down space shooter with partial damage mechanics and ship variety.",
                 "metrics": [
                     {
@@ -134,6 +145,104 @@
                     "Developed full gameplay loop from start to finish",
                     "Implemented partial destruction mechanic (e.g., destroy ship guns only)",
                     "Created achievement, level progression, and upgrade systems"
+                ]
+            }
+        ]
+    },
+    {
+        "client": "GCML Resources, Inc.",
+        "duration": "Jan 2022 - May 2022",
+        "url": "",
+        "projects": [
+            {
+                "name": "Legends of the Pit v2.0",
+                "imageUrl": "/assets/img/lotp.jpg",
+                "description": "3D virtual cockfighting simulation game with cinematic combat sequences.",
+                "metrics": [
+                    {
+                        "type": "Battle System",
+                        "value": "Developed configurable combat manager with seed-randomized action sequences for cinematic battles"
+                    }
+                ],
+                "tools": [
+                    "PlayCanvas",
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                ],
+                "role": "Jr. Frontend Game Developer",
+                "responsibilities": [
+                    "Assisted senior developer in implementing configurable battle system",
+                    "Created cinematic combat manager for virtual cockfighting matches",
+                    "Implemented seed-randomized action sequences for dynamic gameplay"
+                ]
+            }
+        ]
+    },
+    {
+        "client": "Xurpas Inc.",
+        "duration": "May 2019 - Jun 2021",
+        "url": "",
+        "projects": [
+            {
+                "name": "Order Management Tool | Globe Online",
+                "imageUrl": "/assets/img/blank.png",
+                "description": "Internal ticketing system for order processing and customer service management.",
+                "metrics": [],
+                "tools": [
+                    "Angular JS",
+                    "Lavascript",
+                    "HTML",
+                    "CSS",
+                    "Spring Boot",
+                    "Java",
+                    "SQL",
+                    "BitBucket"
+                ],
+                "role": "Full-stack Developer",
+                "responsibilities": [
+                    "Developed and maintained internal ticketing system for order management",
+                    "Implemented form-based workflows for customer service requests",
+                    "Built full-stack features using AngularJS frontend and Spring Boot backend"
+                ]
+            },
+            {
+                "name": "HIMS 2.0 | Veridata Networks Inc.",
+                "imageUrl": "/assets/img/blank.png",
+                "description": "Healthcare Management Information System with membership, customer care, and admin modules.",
+                "metrics": [],
+                "tools": [
+                    "React",
+                    "Material UI",
+                    "Typescript",
+                    "HTML",
+                    "CSS",
+                    "GitLab"
+                ],
+                "role": "Jr. Frontend Web Developer",
+                "responsibilities": [
+                    "Developed customer care module with dynamic form system for patient ticket management",
+                    "Implemented patient type selection and disease classification features",
+                    "Built responsive UI components using React and Material UI for healthcare workflows"
+                ]
+            },
+            {
+                "name": "RFP | Mitchell Madison Group",
+                "imageUrl": "/assets/img/blank.png",
+                "description": "Request for Proposal management system with form-based workflow and document processing.",
+                "metrics": [],
+                "tools": [
+                    "React",
+                    "JavaScript",
+                    "HTML",
+                    "CSS",
+                    "GitLab"
+                ],
+                "role": "Jr. Frontend Web Developer",
+                "responsibilities": [
+                    "Developed form-based interface for RFP submission and management",
+                    "Implemented document processing and workflow management features",
+                    "Built responsive web components using React for business proposal handling"
                 ]
             }
         ]
