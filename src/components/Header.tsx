@@ -1,7 +1,10 @@
 import { Box, Typography, Container } from '@mui/material';
 import { Button } from './ui/Button';
+import aboutData from '../data/about.json';
 
 export default function Header() {
+    const { header } = aboutData;
+    
     return (
         <section id="home" style={{ 
             minHeight: "100vh", 
@@ -26,7 +29,7 @@ export default function Header() {
                             fontSize: { xs: '2.5rem', md: '3.5rem' }
                         }}
                     >
-                        Hi, I'm Jilmer <span role="img" aria-label="waving hand">👋</span>
+                        {header.greeting}
                     </Typography>
                     <Typography 
                         variant="h4" 
@@ -37,7 +40,7 @@ export default function Header() {
                             fontSize: { xs: '1.2rem', md: '1.7rem' }
                         }}
                     >
-                        I build responsive web applications and interactive experiences that blend creativity with performance.
+                        {header.tagline}
                     </Typography>
                     <Typography 
                         variant="body1" 
@@ -51,7 +54,7 @@ export default function Header() {
                             lineHeight: 1.7
                         }}
                     >
-                        From modern web applications to interactive games, I bring ideas to life with clean code, responsive design, and thoughtful user experience.
+                        {header.description}
                     </Typography>
                     <Button
                         variant="primary"
@@ -59,7 +62,7 @@ export default function Header() {
                         scrollTo="projects"
                         scrollDuration={500}
                     >
-                        View My Work
+                        {header.cta_button}
                     </Button>
                 </Box>
             </Container>

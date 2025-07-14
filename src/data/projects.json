@@ -9,23 +9,23 @@
                 "name": "Avalorians",
                 "url": "https://avalorians.io/",
                 "imageUrl": "/assets/img/avalorians-new-logo.webp",
-                "description": "Telegram PvP Clash Royale-like game with reward-based progression.",
+                "description": "PvP battle game with city building mechanics. Built as a Clash Royale-like experience with reward-based progression.",
                 "metrics": [
                     {
                         "type": "Leadership",
-                        "value": "Mentored a junior frontend developer and led development of core gameplay systems and responsive UI components"
+                        "value": "Mentored a junior frontend developer and led the entire frontend development"
                     },
                     {
-                        "type": "Codebase contribution",
-                        "value": "Contributed to ~60% of the codebase (904+ commits on frontend, 207+ commits on multiplayer server)"
+                        "type": "Key features",
+                        "value": "Built real-time PvP battles, city building system, and game mechanics"
                     },
                     {
-                        "type": "Features shipped",
-                        "value": "Shipped 12+ major features including real-time multiplayer gameplay, city building system, and UI state transitions"
+                        "type": "Frontend optimization",
+                        "value": "Reduced frontend load times by 50% and implemented linear interpolation to stabilize frame rate across devices"
                     },
                     {
-                        "type": "Performance optimization",
-                        "value": "Reduced frontend load times by 50% and implemented adaptive delta timing to stabilize frame rate across devices"
+                        "type": "Server optimization",
+                        "value": "Implemented adaptive delta timing on multiplayer server to handle network latency and maintain game synchronization"
                     },
                     {
                         "type": "Scalability",
@@ -46,10 +46,9 @@
                 ],
                 "role": "Lead Frontend Developer",
                 "responsibilities": [
-                    "Managed and mentored junior frontend developer (UI)",
-                    "Implemented pixel-perfect UI/UX from Figma designs for mobile & Telegram platform",
-                    "Led development of gameplay systems (city building, PvP battles)",
-                    "Implemented sprite animation and visual effects",
+                    "Managed and mentored junior frontend developer",
+                    "Built the entire game UI from Figma designs",
+                    "Created PvP battle system and city building mechanics",
                     "Built and maintained multiplayer server with Colyseus"
                 ]
             }
@@ -75,9 +74,9 @@
                 ],
                 "role": "Game Developer",
                 "responsibilities": [
-                    "Integrated 3D models from artists into gameplay mechanics and systems",
-                    "Developed multiplayer game mechanics using Photon PUN networking framework",
-                    "Integrated Steam SDK with Unity Gaming Services for achievement and player progress tracking"
+                    "Built ship customization system where players can equip different hulls, sails, and weapons",
+                    "Created multiplayer battle mechanics for 4v4 sea battles with unique ship abilities",
+                    "Connected game to Steam for achievements and player progress tracking"
                 ]
             },
             {
@@ -95,7 +94,7 @@
                 ],
                 "role": "Game Developer",
                 "responsibilities": [
-                    "Developed utility tools for MetaMask and Solana wallet integration to support lead developer's workflow"
+                    "Built unified wallet connection system that supports both MetaMask and Solana wallets in a single interface"
                 ]
             }
         ]
@@ -124,9 +123,9 @@
                 ],
                 "role": "Game Developer",
                 "responsibilities": [
-                    "Developed full gameplay loop from start to finish",
-                    "Implemented partial destruction mechanic (e.g., destroy ship guns only)",
-                    "Created achievement, level progression, and upgrade systems"
+                    "Built space shooter with 30+ levels, boss battles, and progression system",
+                    "Created partial destruction system where players can destroy individual ship parts",
+                    "Designed achievement system and ship upgrade progression with 50+ upgrades"
                 ]
             }
         ]
@@ -143,7 +142,7 @@
                 "metrics": [
                     {
                         "type": "Battle System",
-                        "value": "Developed configurable combat manager with seed-randomized action sequences for cinematic battles"
+                        "value": "Built combat system with customizable battle rules and randomized action sequences for dynamic gameplay"
                     }
                 ],
                 "tools": [
@@ -154,9 +153,9 @@
                 ],
                 "role": "Jr. Frontend Game Developer",
                 "responsibilities": [
-                    "Assisted senior developer in implementing configurable battle system",
-                    "Created cinematic combat manager for virtual cockfighting matches",
-                    "Implemented seed-randomized action sequences for dynamic gameplay"
+                    "Assisted senior developer in building the battle system",
+                    "Created combat manager for virtual cockfighting matches",
+                    "Built randomized action sequences for dynamic gameplay"
                 ]
             }
         ]
@@ -183,8 +182,8 @@
                 ],
                 "role": "Full-stack Developer",
                 "responsibilities": [
-                    "Developed and maintained internal ticketing system for order management",
-                    "Implemented form-based workflows for customer service requests",
+                    "Built internal ticketing system for order processing and customer service",
+                    "Created customer service workflow system with form validation",
                     "Built full-stack features using AngularJS frontend and Spring Boot backend"
                 ]
             },
@@ -203,8 +202,8 @@
                 ],
                 "role": "Jr. Frontend Web Developer",
                 "responsibilities": [
-                    "Developed customer care module with dynamic form system for patient ticket management",
-                    "Implemented patient type selection and disease classification features",
+                    "Built customer care module with dynamic form system for patient management",
+                    "Created patient type selection and disease classification system",
                     "Built responsive UI components using React and Material UI for healthcare workflows"
                 ]
             },
@@ -222,8 +221,8 @@
                 ],
                 "role": "Jr. Frontend Web Developer",
                 "responsibilities": [
-                    "Developed form-based interface for RFP submission and management",
-                    "Implemented document processing and workflow management features",
+                    "Built form-based interface for RFP submission and management",
+                    "Created document processing and workflow management system",
                     "Built responsive web components using React for business proposal handling"
                 ]
             }

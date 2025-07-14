@@ -1,10 +1,16 @@
 {
+    "header": {
+        "greeting": "Hi, I'm Jilmer 👋",
+        "tagline": "I build web applications and mobile games that people actually want to use.",
+        "description": "From web apps to mobile games with thousands of users, I focus on creating experiences that work well and feel good to use.",
+        "cta_button": "View My Work"
+    },
     "bio": [
-        "Hey, I'm Jilmer — a frontend developer who loves creating user-friendly web experiences. I've worked across a variety of projects, from modern web applications to interactive games with 10,000+ users. My favorite part of web development is making interfaces that *feel* great — whether it's a smooth user experience, design that works on any device, or intuitive UI that users love.",
-        "I specialize in React, TypeScript, and modern frontend development, with expertise in responsive design, performance optimization, and scalable component architecture. I'm passionate about clean code, accessibility, and shipping features that actually make a difference to users.",
-        "When I'm not coding, you'll probably find me lifting weights, reading about UX design principles, or exploring new frontend technologies for inspiration. I'm always learning and always building."
+        "Hey, I'm Jilmer — a frontend developer who loves building things people actually use. My biggest project was Avalorians, a game where players battle each other in a Clash Royale-style experience.",
+        "I specialize in React, TypeScript, and modern frontend development. I love writing clean, optimized code and use tools like Cursor and ChatGPT to stay efficient. I'm passionate about creating features that users actually want.",
+        "When I'm not coding, you'll find me lifting weights or playing video games. I'm always learning and building new things."
     ],
-    "short_summary": "Frontend developer with 5+ years of experience specializing in React, TypeScript, and modern web development. Led development of web applications and interactive games reaching 10,000+ users with focus on responsive design, performance optimization, and scalable architecture.",
+    "short_summary": "Frontend developer with 5+ years of experience specializing in React, TypeScript, and web development. Built Avalorians, a game with PvP battles and city building. I love writing clean, optimized code and use modern tools to stay efficient.",
     "portfolio_url": "https://jjbc-portfolio.netlify.app/",
     "github_url": "https://github.com/jjbc-ocm",
     "technologies": [
@@ -26,16 +32,16 @@
     ],
     "highlights": [
         {
-            "icon": "Build",
-            "text": "12+ major frontend features shipped across web applications"
-        },
-        {
             "icon": "Devices",
-            "text": "Mobile-first responsive design for 10,000+ users"
+            "text": "Created mobile-first applications that work smoothly across all devices"
         },
         {
             "icon": "Speed",
-            "text": "Optimized frontend performance and reduced load times by 50%"
+            "text": "Cut game loading times in half and handled 100+ simultaneous players without lag"
+        },
+        {
+            "icon": "Build",
+            "text": "Built multiplayer game with PvP battles and city building mechanics"
         }
     ],
     "education": [
