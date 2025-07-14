@@ -11,7 +11,8 @@ import {
   ListItemIcon,
   ListItemText,
   useTheme,
-  useMediaQuery
+  useMediaQuery,
+  Typography
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Home, Info, Work, ContactMail, Description } from '@mui/icons-material';
@@ -39,40 +40,43 @@ export default function Navbar() {
     setDrawerOpen(false);
   };
 
+  const handleLogoClick = () => {
+    const el = document.getElementById('home');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   // Helper method to render navigation buttons
   const renderNavButton = (to: string, label: string, icon: React.ReactNode) => (
     <Button 
       variant="navigation"
       onClick={() => handleNavClick(to)}
       sx={{
-        flex: { xs: 1, sm: 'unset' },
         display: 'flex',
-        flexDirection: { xs: 'column', sm: 'row' },
+        flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        minWidth: { xs: 0, sm: 64 },
-        px: { xs: 1, sm: 2 },
-        py: { xs: 0.5, sm: 1 },
-        gap: { xs: 0.2, sm: 1 },
-        mt: { xs: 0.5, sm: 0 },
+        minWidth: 64,
+        px: 2,
+        py: 1,
+        gap: 1,
       }}
     >
       <Box
         sx={{
-          fontSize: { xs: '2rem', sm: '1.3rem' },
+          fontSize: '1.3rem',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          mb: { xs: 0.2, sm: 0 },
         }}
       >
         {icon}
       </Box>
       <Box
         sx={{
-          fontSize: { xs: '0.75rem', sm: '1rem' },
+          fontSize: '1rem',
           fontWeight: 500,
-          mt: { xs: 0.1, sm: 0 },
           letterSpacing: 0.5,
         }}
       >
@@ -93,67 +97,142 @@ export default function Navbar() {
       }}
     >
       <Container maxWidth="lg">
-        <Toolbar sx={{ justifyContent: isMobile ? 'flex-start' : 'center', minHeight: { xs: 56, sm: 64 } }}>
+        <Toolbar sx={{ justifyContent: 'space-between', minHeight: { xs: 56, sm: 64 } }}>
+          {/* Logo on the left */}
+          <Box 
+            onClick={handleLogoClick}
+            sx={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              cursor: 'pointer',
+              transition: 'transform 0.2s ease',
+              '&:hover': {
+                transform: 'scale(1.05)'
+              }
+            }}
+          >
+            <Box
+              sx={{
+                width: { xs: 32, sm: 40 },
+                height: { xs: 32, sm: 40 },
+                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                borderRadius: 2,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                mr: { xs: 1, sm: 2 },
+                boxShadow: '0 2px 8px rgba(0,0,0,0.15)'
+              }}
+            >
+              <Typography
+                sx={{
+                  fontFamily: "Consolas, 'Courier New', monospace",
+                  fontSize: { xs: '1.2rem', sm: '1.5rem' },
+                  fontWeight: 'bold',
+                  color: 'white',
+                  lineHeight: 1
+                }}
+              >
+                {'{J}'}
+              </Typography>
+            </Box>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 700,
+                color: 'white',
+                display: { xs: 'none', sm: 'block' },
+                fontSize: { xs: '1.1rem', sm: '1.3rem' }
+              }}
+            >
+              Jilmer Cariaso
+            </Typography>
+          </Box>
+
+          {/* Navigation on the right */}
           {isMobile ? (
-            <>
-              <IconButton
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                onClick={() => setDrawerOpen(true)}
-                sx={{ mr: 2 }}
-              >
-                <MenuIcon sx={{ fontSize: 32 }} />
-              </IconButton>
-              <Drawer
-                anchor="left"
-                open={drawerOpen}
-                onClose={() => setDrawerOpen(false)}
-                PaperProps={{ sx: { width: 240, background: 'white' } }}
-              >
-                <Box sx={{ mt: 2 }}>
-                  <List>
-                    {navItems.map((item) => (
-                      <ListItem
-                        component="button"
-                        disableGutters
-                        key={item.to}
-                        onClick={() => handleNavClick(item.to)}
-                        sx={{
-                          background: 'none',
-                          border: 'none',
-                          borderRadius: 2,
-                          margin: '6px 8px',
-                          padding: '12px 16px',
-                          fontWeight: 500,
-                          color: '#1f2937',
-                          display: 'flex',
-                          alignItems: 'center',
-                          transition: 'background 0.2s, color 0.2s',
-                          boxShadow: 'none',
-                          minHeight: 48,
-                          '&:hover, &:focus': {
-                            background: '#f3f4f6',
-                            color: '#6366f1',
-                            outline: 'none',
-                          },
-                        }}
-                      >
-                        <ListItemIcon sx={{ color: '#6366f1', minWidth: 36, mr: 1 }}>{item.icon}</ListItemIcon>
-                        <ListItemText primary={item.label} sx={{ '.MuiListItemText-primary': { fontWeight: 500, fontSize: '1.05rem' } }} />
-                      </ListItem>
-                    ))}
-                  </List>
-                </Box>
-              </Drawer>
-            </>
+            <IconButton
+              color="inherit"
+              aria-label="menu"
+              onClick={() => setDrawerOpen(true)}
+              sx={{ 
+                color: 'white',
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)'
+                }
+              }}
+            >
+              <MenuIcon sx={{ fontSize: 28 }} />
+            </IconButton>
           ) : (
-            <Box sx={{ display: 'flex', gap: { xs: 1, sm: 2 }, width: '100%', justifyContent: 'center' }}>
+            <Box sx={{ display: 'flex', gap: 1 }}>
               {navItems.map((item) => 
                 renderNavButton(item.to, item.label, item.icon)
               )}
             </Box>
           )}
+
+          {/* Mobile Drawer */}
+          <Drawer
+            anchor="right"
+            open={drawerOpen}
+            onClose={() => setDrawerOpen(false)}
+            PaperProps={{ 
+              sx: { 
+                width: 280, 
+                background: 'white',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.12)'
+              } 
+            }}
+          >
+            <Box sx={{ mt: 2, p: 2 }}>
+              <Typography
+                variant="h6"
+                sx={{
+                  fontWeight: 700,
+                  color: '#6366f1',
+                  mb: 2,
+                  textAlign: 'center',
+                  fontSize: '1.2rem'
+                }}
+              >
+                Menu
+              </Typography>
+              <List>
+                {navItems.map((item) => (
+                  <ListItem
+                    component="button"
+                    disableGutters
+                    key={item.to}
+                    onClick={() => handleNavClick(item.to)}
+                    sx={{
+                      background: 'none',
+                      border: 'none',
+                      borderRadius: 2,
+                      margin: '4px 0',
+                      padding: '12px 16px',
+                      fontWeight: 500,
+                      color: '#1f2937',
+                      display: 'flex',
+                      alignItems: 'center',
+                      transition: 'background 0.2s, color 0.2s',
+                      boxShadow: 'none',
+                      minHeight: 48,
+                      width: '100%',
+                      '&:hover, &:focus': {
+                        background: '#f3f4f6',
+                        color: '#6366f1',
+                        outline: 'none',
+                      },
+                    }}
+                  >
+                    <ListItemIcon sx={{ color: '#6366f1', minWidth: 36, mr: 1 }}>{item.icon}</ListItemIcon>
+                    <ListItemText primary={item.label} sx={{ '.MuiListItemText-primary': { fontWeight: 500, fontSize: '1.05rem' } }} />
+                  </ListItem>
+                ))}
+              </List>
+            </Box>
+          </Drawer>
         </Toolbar>
       </Container>
     </AppBar>
