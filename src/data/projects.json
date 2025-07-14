@@ -9,7 +9,7 @@
                 "name": "Avalorians",
                 "url": "https://avalorians.io/",
                 "imageUrl": "/assets/img/avalorians-new-logo.webp",
-                "description": "PvP battle game with city building mechanics. Built as a Clash Royale-like experience with reward-based progression.",
+                "description": "Telegram Mini-app PvP battle game with city building mechanics. Built as a Clash Royale-like experience with reward-based progression.",
                 "metrics": [
                     {
                         "type": "Leadership",
