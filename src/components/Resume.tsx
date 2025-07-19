@@ -21,7 +21,7 @@ function renderResumeContent() {
         <div style="text-align: center; margin-bottom: 32px;">
             <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">Jilmer John Cariaso</h1>
             <h2 style="font-size: 1.25rem; font-weight: 600; color: #6b7280; margin-bottom: 0.5rem;">Software Developer</h2>
-            <div style="color: #6b7280; font-size: 1rem;">jjbconecodeman@gmail.com • 
+            <div style="color: #6b7280; font-size: 1rem;">+63 920 813 0511 • jjbconecodeman@gmail.com • 
                 <a href="${aboutData.portfolio_url}" target="_blank" rel="noopener noreferrer" style="color: #6366f1; text-decoration: none; font-weight: 500;">
                     Portfolio
                 </a> • 
@@ -85,6 +85,19 @@ function renderResumeContent() {
             `).join('')}
         </div>
         ` : ''}
+        ${aboutData.references && aboutData.references.some(ref => ref.name && ref.name.trim() !== "") ? `
+        <hr style="margin: 32px 0; border: none; border-top: 1px solid #e5e7eb;" />
+        <div style="margin-bottom: 32px;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Character References</h3>
+            ${aboutData.references.filter(ref => ref.name && ref.name.trim() !== "").map((ref) => `
+                <div style="margin-bottom: 10px;">
+                    <div style="font-size: 1rem; font-weight: 600; color: #374151;">${ref.name}</div>
+                    <div style="font-size: 0.98rem; color: #6b7280;">${ref.position} • ${ref.company}</div>
+                    <div style="font-size: 0.98rem; color: #6b7280;">${ref.email}</div>
+                </div>
+            `).join('')}
+        </div>
+        ` : ''}
         <style>
         @media print {
           * {
@@ -135,7 +148,7 @@ export default function Resume() {
                     <Typography variant="h6" color="#d1d5db" sx={{ fontWeight: 400, mb: 3 }}>
                         Professional Experience & Skills
                     </Typography>
-                    {/* <Button
+                    <Button
                         variant="contained"
                         startIcon={<Download />}
                         onClick={handleOpenPrintWindow}
@@ -160,7 +173,7 @@ export default function Resume() {
                         }}
                     >
                         Open in New Window
-                    </Button> */}
+                    </Button>
                     <Button
                         variant="contained"
                         startIcon={<Download />}
@@ -213,7 +226,7 @@ export default function Resume() {
                             Software Developer
                         </Typography>
                         <Typography variant="body1" color="#6b7280">
-                            jjbconecodeman@gmail.com •{' '}
+                            +63 920 813 0511 • jjbconecodeman@gmail.com •{' '}
                             <a
                                 href={aboutData.portfolio_url}
                                 target="_blank"
@@ -382,11 +395,8 @@ export default function Resume() {
                             {aboutData.references.filter(ref => ref.name && ref.name.trim() !== "").map((ref, idx) => (
                                 <Box key={idx} sx={{ mb: 2 }}>
                                     <Typography variant="subtitle1" sx={{ fontWeight: 500, color: '#374151' }}>{ref.name}</Typography>
-                                    {ref.contacts && ref.contacts.length > 0 && (
-                                        <Typography variant="body2" color="#6b7280">
-                                            {ref.contacts.join(', ')}
-                                        </Typography>
-                                    )}
+                                    <Typography variant="body2" color="#6b7280">{ref.position} • {ref.company}</Typography>
+                                    <Typography variant="body2" color="#6b7280">{ref.email}</Typography>
                                 </Box>
                             ))}
                         </Box>

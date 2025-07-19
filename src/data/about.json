@@ -53,8 +53,16 @@
     ],
     "references": [
         {
-            "name": "",
-            "contacts": []
+            "name": "Nichole Jan Anastacio",
+            "position": "UI/UX Designer",
+            "company": "Cloudnode IT Solutions",
+            "email": "nicholejan08@gmail.com"
+        },
+        {
+            "name": "Eduardo De Guzman III",
+            "position": "Lead Backend Developer",
+            "company": "Cloudnode IT Solutions",
+            "email": "kaidolex@gmail.com"
         }
     ]
 }
