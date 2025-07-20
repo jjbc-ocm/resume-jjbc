@@ -45,7 +45,7 @@ function renderResumeContent() {
         <hr style="margin: 32px 0; border: none; border-top: 1px solid #e5e7eb;" />
         <div style="margin-bottom: 32px;">
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;">Professional Experience</h3>
-            ${projectsData.map((client) => `
+            ${projectsData.filter(client => !client.personal).map((client) => `
                 <div style="margin-bottom: 24px;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
                         <span style="font-size: 1.1rem; font-weight: 700;">${client.client}</span>
@@ -289,7 +289,7 @@ export default function Resume() {
                             Professional Experience
                         </Typography>
                         
-                        {projectsData.map((client, clientIndex) => (
+                        {projectsData.filter(client => !client.personal).map((client, clientIndex) => (
                             <Box key={clientIndex} sx={{ mb: 3 }}>
                                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
                                     <Typography variant="h6" sx={{ fontWeight: 600, color: '#1f2937' }}>

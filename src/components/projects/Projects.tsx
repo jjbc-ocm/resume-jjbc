@@ -9,7 +9,8 @@ import {
 } from '@mui/material';
 import {
     ExpandMore,
-    Business
+    Business,
+    Person
 } from '@mui/icons-material';
 import projectsData from '../../data/projects.json';
 import { Project } from './Project';
@@ -17,7 +18,7 @@ import React, { useState } from 'react';
 
 
 export default function Projects() {
-    const [expanded, setExpanded] = useState(0); // 0 = first accordion expanded by default
+    const [expanded, setExpanded] = useState(1); // 1 = Cloudnode IT Solutions expanded by default
 
     const handleAccordionChange = (panel: number) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
         setExpanded(isExpanded ? panel : -1);
@@ -56,7 +57,11 @@ export default function Projects() {
                 >
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', flexDirection: { xs: 'column', sm: 'row' } }}>
                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                            <Business sx={{ mr: { xs: 1, sm: 2 }, color: '#6366f1', fontSize: { xs: '1.2rem', sm: '2rem' } }} />
+                            {client.personal ? (
+                                <Person sx={{ mr: { xs: 1, sm: 2 }, color: '#8b5cf6', fontSize: { xs: '1.2rem', sm: '2rem' } }} />
+                            ) : (
+                                <Business sx={{ mr: { xs: 1, sm: 2 }, color: '#6366f1', fontSize: { xs: '1.2rem', sm: '2rem' } }} />
+                            )}
                             <Typography variant="h5" component="h3" sx={{ fontWeight: 700, color: '#1f2937', fontSize: { xs: '1.1rem', sm: '1.5rem' } }}>
                                 {client.client}
                             </Typography>
@@ -65,8 +70,8 @@ export default function Projects() {
                             variant="body2"
                             color="#6b7280"
                             sx={{
-                                backgroundColor: 'rgba(99, 102, 241, 0.08)',
-                                border: '1px solid rgba(99, 102, 241, 0.2)',
+                                backgroundColor: client.personal ? 'rgba(139, 92, 246, 0.08)' : 'rgba(99, 102, 241, 0.08)',
+                                border: client.personal ? '1px solid rgba(139, 92, 246, 0.2)' : '1px solid rgba(99, 102, 241, 0.2)',
                                 px: { xs: 1, sm: 2 },
                                 py: { xs: 0.2, sm: 0.5 },
                                 borderRadius: 2,

@@ -1,5 +1,50 @@
 [
     {
+        "client": "Personal Projects",
+        "duration": "July 2025 - Present",
+        "url": "",
+        "certificateUrl": "",
+        "personal": true,
+        "projects": [
+            {
+                "name": "Smart Saving Tracker",
+                "url": "https://expense-ai-tracker-three.vercel.app/",
+                "imageUrl": "/assets/img/blank.png",
+                "description": "Personal SaaS expense tracking application with AI-powered natural language input. The AI automatically categorizes and records transactions.",
+                "metrics": [
+                    {
+                        "type": "AI Accuracy",
+                        "value": "95% accuracy in natural language parsing and transaction categorization using OpenAI integration"
+                    },
+                    {
+                        "type": "Development Speed",
+                        "value": "Built complete MVP in one week using modern development tools and AI assistance"
+                    },
+                    {
+                        "type": "Future Plans",
+                        "value": "Planning subscription model and advanced features for full SaaS monetization"
+                    }
+                ],
+                "tools": [
+                    "React",
+                    "TypeScript",
+                    "Material UI",
+                    "Supabase",
+                    "OpenAI API",
+                    "Vercel"
+                ],
+                "role": "Full-stack Developer",
+                "responsibilities": [
+                    "Built complete MVP with AI-powered natural language expense input",
+                    "Implemented user authentication and data persistence with Supabase",
+                    "Created responsive UI with Material UI for cross-device compatibility",
+                    "Integrated OpenAI API for intelligent transaction parsing and categorization",
+                    "Deployed and maintained production application on Vercel"
+                ]
+            }
+        ]
+    },
+    {
         "client": "Cloudnode IT Solutions OPC",
         "duration": "May 2024 - Aug 2025",
         "url": "",
